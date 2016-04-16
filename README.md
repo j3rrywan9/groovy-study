@@ -7,8 +7,9 @@ Groovy comes with a compiler called **groovyc**.
 
 ## Running a compiled Groovy script with Java
 Running a compiled Groovy program is identical to running a compiled Java program, with the added requirement of having the embedded groovy-all*.jar file in your JVM's classpath, which will ensure that all of Groovy's 3rd-party dependencies will be resolved automatically at runtime.
-
-`java -cp /Users/jwang/.gvm/groovy/current/embeddable/groovy-all-2.4.4.jar:classes Fibonacci`
+```
+java -cp $GROOVY_HOME/embeddable/groovy-all-2.4.4.jar:build/classes/main me.jerrywang.example.Fibonacci
+```
 
 ## Dynamic Programming and Meta Object Protocol (MOP)
 Dynamic programming allows the introduction of a new state, or even more importantly, allows the addition of a new behavior or modification of an existing one.
