@@ -39,3 +39,17 @@ public interface GroovyObject {
 	void setMetaClass(MetaClass metaClass);
 }
 ```
+
+### Modifying behavior through the metaclass
+For every class A in the class loader, Groovy maintains a metaclass -- an object of type MetaClass.
+
+## Category
+Groovy adds a **use** method to **java.lang.Object** that takes two parameters: a category class (or any number thereof) and a closure:
+```groovy
+public Object use(Class categoryClass, Closure closure)
+
+public Object use(Object[] array)
+
+public Object use(List categoryClassList, Closure closure)
+```
+While the closure is executed, the MOP is modified as defined by the category. After the closure execution is finished, the MOP is reset to its old state.
