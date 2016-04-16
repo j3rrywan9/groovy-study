@@ -1,3 +1,5 @@
+package me.jerrywang.example
+
 class Book {
     private String title
 
