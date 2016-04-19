@@ -11,6 +11,19 @@ Running a compiled Groovy program is identical to running a compiled Java progra
 java -cp $GROOVY_HOME/embeddable/groovy-all-2.4.4.jar:build/classes/main me.jerrywang.example.Fibonacci
 ```
 
+## Closures
+Closures are objects of which the main purpose in life is their behavior.
+
+A closure is a piece of code wrapped up as an object. It acts like a method in that it can take parameters and return a value. It's normal object in that you can pass a reference to it just as you can to any other object.
+
+If the closure needs to take only a single parameter to work on, Groovy provides a default name "it" so that you don't need to declare it specifically.
+
+Two particular areas that benefit from closures:
+* Performing everyday tasks with collections
+* Using resources in a safe manner
+
+In general terms, such a mechanism uses a *callback* to execute the work. Closures are Groovy's way of providing transparent callback targets as first class citizens.
+
 ## Dynamic Programming and Meta Object Protocol (MOP)
 Dynamic programming allows the introduction of a new state, or even more importantly, allows the addition of a new behavior or modification of an existing one.
 
