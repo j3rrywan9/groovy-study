@@ -7,7 +7,7 @@ repositories {
 }
 
 dependencies {
-	compile name: 'guava-19.0'
+	compile 'guava:guava:19.0'
 	compile 'org.codehaus.groovy:groovy-all:2.4.4'
 }
 
