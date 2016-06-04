@@ -2,25 +2,25 @@ apply plugin: 'groovy'
 apply plugin: 'idea'
 
 repositories {
-	flatDir { dirs 'lib' }
-	jcenter()
+  flatDir { dirs 'lib' }
+  jcenter()
 }
 
 dependencies {
-	compile 'guava:guava:19.0'
-	compile 'org.codehaus.groovy:groovy-all:2.4.4'
+  compile 'guava:guava:19.0'
+  compile 'org.codehaus.groovy:groovy-all:2.4.6'
 }
 
 task runHash(dependsOn: 'classes', type: JavaExec) {
-	main = 'me.jerrywang.example.murmur3_hash'
-	classpath = sourceSets.main.runtimeClasspath
+  main = 'me.jerrywang.example.murmur3_hash'
+  classpath = sourceSets.main.runtimeClasspath
 }
 
 idea {
-	project {
-		vcs = 'Git'
-	}
-	module {
-		downloadSources = true
-	}
+  project {
+    vcs = 'Git'
+  }
+  module {
+    downloadSources = true
+  }
 }
