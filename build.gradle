@@ -7,8 +7,8 @@ repositories {
 }
 
 dependencies {
-  compile 'guava:guava:19.0'
-  compile 'org.codehaus.groovy:groovy-all:2.4.6'
+  implementation 'guava:guava:19.0'
+  implementation 'org.codehaus.groovy:groovy-all:2.4.6'
 }
 
 task runHash(dependsOn: 'classes', type: JavaExec) {
