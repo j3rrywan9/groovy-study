@@ -3,7 +3,7 @@ apply plugin: 'idea'
 
 repositories {
   flatDir { dirs 'lib' }
-  jcenter()
+  mavenCentral()
 }
 
 dependencies {
