@@ -4,12 +4,11 @@ plugins {
 }
 
 repositories {
-  flatDir { dirs 'lib' }
   mavenCentral()
 }
 
 dependencies {
-  implementation 'guava:guava:19.0'
+  implementation 'com.google.guava:guava:30.1.1-jre'
   implementation 'org.codehaus.groovy:groovy-all:2.5.14'
 }
 
