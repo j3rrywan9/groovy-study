@@ -12,8 +12,9 @@ dependencies {
 }
 
 task runHash(dependsOn: 'classes', type: JavaExec) {
-  main = 'me.jerrywang.example.murmur3_hash'
+  description 'Runs class me.jerrywang.example.Murmur3Hash'
   classpath = sourceSets.main.runtimeClasspath
+  mainClass = 'me.jerrywang.example.Murmur3Hash'
 }
 
 idea {
